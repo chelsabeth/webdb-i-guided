@@ -5,24 +5,45 @@ const db = require('../data/db-config.js');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-
+router.get('/', async (req, res, next) => {
+    try {
+         // translates to SELECT * FROM posts
+          res.json(await db.select("*").from("posts"))
+    } catch (err) {
+        next(err)
+    }
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res, next) => {
+    try {
 
+    } catch (err) {
+        next(err)
+    }
 });
 
-router.post('/', (req, res) => {
-
+router.post('/', async (req, res, next) => {
+    try {
+        
+    } catch (err) {
+        next(err)
+    }
 });
 
-router.put('/:id', (req, res) => {
-
+router.put('/:id', async (req, res, next) => {
+    try {
+        
+    } catch (err) {
+        next(err)
+    }
 });
 
-router.delete('/:id', (req, res) => {
-
+router.delete('/:id', async (req, res, next) => {
+    try {
+        
+    } catch (err) {
+        next(err)
+    }
 });
 
 module.exports = router;

@@ -29,3 +29,11 @@ WHERE <column name> = <some value>;
 UPDATE Category
 SET Description = 'Desserts and ready-to-eat meals'
 WHERE Id = 9;
+
+# delete
+DELETE FROM <table name>
+WHERE <column name> = <some value>
+
+DELETE FROM Category
+WHERE Id=9;
+
